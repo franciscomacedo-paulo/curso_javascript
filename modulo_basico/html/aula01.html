@@ -54,6 +54,15 @@
             <button type="button" onclick="document.getElementById('div_teste').style.backgroundColor = cor.value">Adicionar cor</button>
         </div>
      </div>
+
+     <!-- USANDO O INPUT RANGE PARA ALTERAR A FONT SIXE DE UM ELEMENTO HTML -->
+      <div>
+        <h2 id="titulo">Francisco</h2>
+        <label for="aumentar">Seleciona o tamanho da fonte:</label>
+        <input type="range" name="aumentar" id="aumentar" max="50">
+       
+        <div><button type="button" onclick="document.getElementById('titulo').style.fontSize = aumentar.value">Tamanho da fonte</button></div>
+      </div>
     <script src="../js/aula01.js"></script>  
 </body>
 </html>
