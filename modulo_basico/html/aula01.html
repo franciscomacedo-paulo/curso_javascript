@@ -22,6 +22,12 @@
           box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
           border-radius: 10px;
         }
+        #div_teste{
+            width: 200px;
+            height: 100px;
+            background-color: tomato;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -38,6 +44,16 @@
         <button type="button" onclick="document.getElementById('image').src='lamapda_acessa1.png'">Acender</button>
         <img src="../../img/lamapda_apada2 1.png" alt="lamapada apagada" id="image">
     </div>
+    <hr>
+    <!-- TESTANDO O USO DE ALGUNS INPUTS COM JS-->
+     <div>
+        <div id="div_teste"></div>
+        <label for="cor">Seleciona uma cor:</label>
+        <input type="color" name="cor" id="cor" required>
+        <div>
+            <button type="button" onclick="document.getElementById('div_teste').style.backgroundColor = cor.value">Adicionar cor</button>
+        </div>
+     </div>
     <script src="../js/aula01.js"></script>  
 </body>
 </html>
