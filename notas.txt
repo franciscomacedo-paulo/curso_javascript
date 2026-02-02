@@ -1,0 +1,1 @@
+Este meu repositório vai conter todas minhas aulas do curso de JavaScript, que será do básico ao avançado.
