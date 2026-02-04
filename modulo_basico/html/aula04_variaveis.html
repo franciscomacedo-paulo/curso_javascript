@@ -11,6 +11,12 @@
             background-color: #03120E;
             color: #8AB0AB;
         }
+        span{
+            color: #817f7f;
+        }
+        #s{
+            color: rgb(175, 5, 5);
+        }
     </style>
 </head>
 <body>
@@ -22,6 +28,57 @@
         <li>var</li>
         <li>const</li>
     </ul>
+    <section>
+        <dl>
+            <dt>Var</dt>
+            <dd>
+                A <strong>palavra-chave: var</strong> serve para declarar uma variavél no JavaScript, mais o var respeita o escopo. Ou seja mesmo que ela seja declarado dentro de uma função, ainda será possível usar ela por um comando de exibição, fora da função.
+            </dd>
+        </dl>
+        <h2>Exemplo:</h2>
+        <pre>
+            <code>
+        if(true){
+            var nome = "Paulo"
+        }
+        console.log(nome) <span>//resultado 'Paulo'</span>
+            </code>
+        </pre>
+    </section>
+    <section>
+        <dl>
+            <dt>Let</dt>
+            <dd>
+                A <strong>palavra-chave: let</strong> criado para substituirr o var, essa sim respeita o escopo, ela funciona apenas no local onde ela foi declarada. 
+            </dd>
+        </dl>
+        <h2>Exemplo:</h2>
+        <pre>
+            <code>
+        if(true){
+            let nome = "Paulo"
+        }
+        console.log(nome) <span>//resultado <span id="s">'referenceError'</span></span>
+            </code>
+        </pre>
+    </section>
+    <section>
+        <dl>
+            <dt>Const</dt>
+            <dd>
+                A <strong>palavra-chave: const</strong> é usado para declarar valores que não podem mudar ou alterar o seu valor. 
+            </dd>
+        </dl>
+        <h2>Exemplo:</h2>
+        <pre>
+            <code>
+        const curso = "JavaScript"
+        curso = "Python"
+        console.log(curso) <span>//resultado <span id="s">'TypeError: Assignment to constant variable'</span></span> 
+            </code>
+        </pre>
+
+    </section>
 
 
     <script src="../js/aula04_variaveis.js"></script>
