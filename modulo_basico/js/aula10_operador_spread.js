@@ -33,6 +33,10 @@ for(n of val_teste){
 console.table(val_vazio)
 
 console.log("==================================================")
-const numbers = [1, 2, 3];
-const s = Math.sum(numbers)
-console.log(s)
+// const numbers = [1, 2, 3];
+// const s = Math.sum(numbers)
+// console.log(s)
+
+console.log("==================================================")
+let varios_numero = [3,5,6,7,8,1]
+console.log(varios_numero)
