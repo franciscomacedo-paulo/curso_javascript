@@ -17,5 +17,11 @@ console.log(v1 < v2 && v2 < v3) //true
 console.log("------------------ || ------------------")
 console.log(v2 > v1 || v1 > v3) //true
 
-console.log("------------------ ! ------------------")
 console.log(!(v1 > v3 || v2 > v1)) // now it will be false
+
+console.log("------------------------------------")
+if((v1 ** 2) > v2 && v2 < v3 ){
+    console.log("verdade")
+}else{
+    console.log("falso")
+}
