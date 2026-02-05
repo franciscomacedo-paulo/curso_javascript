@@ -9,3 +9,8 @@ numI = 10
 numF = 5.1
 str = "Lurdes"
 logico = true
+
+console.log(numI + " é do tipo " + typeof(numI) )
+console.log(numF + " é do tipo " + typeof(numF) )
+console.log(str + " é do tipo " + typeof(str) )
+console.log(logico + " é do tipo " + typeof(logico) )
