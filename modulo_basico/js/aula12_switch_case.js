@@ -15,7 +15,7 @@ if(week_days === 'monday'){
 }else if(week_days === 'thursday'){
     console.log("Bora que atraz vem gente dentro do if")
 
-}else if(week_days === 'friday'){
+}else if(week_days === 'friday' || week_days === 'saturday' || week_days === 'sunday'){
     console.log("Chegou o dia do homem dentro do if")
 
 }else{
@@ -39,7 +39,7 @@ switch(week_days){
     case 'thursday':
         console.log("Bora que atraz vem gente dentro do switch")
         break
-    case 'friday':
+    case 'friday': case 'saturday': case 'sunday':
         console.log("Chegou o dia do homem dentro do switch")
         break
     default:
