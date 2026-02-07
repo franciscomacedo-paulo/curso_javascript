@@ -29,3 +29,17 @@ for(let i = 1;i <= 15;i++){
 }
 console.log("A quantidade de valores par encontrado foi de: " + even)
 console.log("A quantidade de valores impar encontrado foi de: "+ odd)
+
+// TESTANDO O USO DE OUTROS FOR 
+console.log("*************** FOR IN **************")
+let frutas = ['banana','kiwi','uva','abacate']
+
+for(chaves in frutas){
+    console.table(chaves)
+}
+
+// TESTANDO O USO DO FOR OF
+console.log("*************** FOR OF **************")
+for(valores of frutas){
+    console.log(valores)
+}
