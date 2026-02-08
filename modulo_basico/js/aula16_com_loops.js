@@ -9,3 +9,14 @@ console.log(list_number_3)
 for(n of list_number_3){
     console.log(n)
 }
+
+//* MOSTRANDO O ANTENCESSOR DE UM NUMERO
+const number_digite = document.getElementById('num')
+let show_number = document.getElementById('show_number')
+const btn = document.getElementById('antecessor')
+
+
+btn.addEventListener('click', ()=>{
+    show_number.innerText = Number(number_digite.value)
+    
+})
