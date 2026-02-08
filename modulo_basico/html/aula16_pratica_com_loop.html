@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando com loops</title>
+    <style>
+        h1{
+            text-align: center;
+            font-variant: small-caps;
+        }
+        input[type="number"]{
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        button{
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prática com loops</h1>
+    <hr>
+    <div>
+        <label for="num">Digite um número:</label>
+        <input type="number" name="num" id="num" min="1" step="0.1"><br><br>
+        <button type="button" id="btn">Ver antecessor</button>
+    </div>
+    <div>
+        <p>O antecessor do número é: <span id="show_number">0</span> = <span id="antecessor"></span></p>
+    </div>
+
+
+    
+    <script src="../js/aula16_com_loops.js"></script>
+</body>
+</html>
