@@ -5,8 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Francisco Macedo">
     <title>Funções Parametrizada em Js</title>
+    <style>
+        label{
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        input[type="number"]{
+            padding: 10px;
+            margin: 16px 0px;
+            width: 250px;
+        }
+        button{
+            padding: 16px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 700;
+
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Funções Parametrizada</h1>
+    </header>
+    <div>
+        <h2>Calcule sua idade</h2>
+        <div>
+            <label for="ano_actual">Digite o ano actual:</label> <br>
+            <input type="number" name="ano_actual" id="ano_actual" required placeholder="O ano em que estas agora" max="2026">
+        </div>
+        <div>
+            <label for="ano_nasc">Digite o ano em que nasceste:</label> <br>
+            <input type="number" name="ano_nasc" id="ano_nasc" placeholder="O ano em que nasceste" required max="2026">
+        </div>
+        <div>
+            <button type="button" id="btn_calc">Mostrar idade</button>
+        </div>
+        <hr>
+        <div>
+            <p>O senhor(a) esta com <span id="idade">0</span> anos de idade</p>
+        </div>
+    </div>
+
+
+    <script src="../aula03_funcao_parametrizada.js"></script>
     
 </body>
 </html>
