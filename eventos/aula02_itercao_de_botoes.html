@@ -131,22 +131,21 @@
 
         // Funcao para remover a class active do elemento actual
         function removeItemActiveClass(){
-            let itemActalActive = document.querySelector('.item_active')
-            itemActalActive.classList.remove('item_active')
+            let itemActalActive = document.querySelector('.btn_active')
+            itemActalActive.classList.remove('btn_active')
             console.log("Estilo removido!")
         }
 
         // Funcao para adicionar a class active no elemento clicado
         function addClassActive(){
-            let itemActalActive = document.querySelector('.item_active')
-            itemActalActive.classList.add('item_active')
+            let addActalActive = document.querySelectorAll('.btn')
+            addActalActive.classList.add('btn_active')
 
         }
 
         btn_addres.addEventListener('click', ()=>{
-            removeItemActiveClass()
-            addClassActive()
-
+            removeItemActiveClass();
+            addClassActive();
         })
 
 
