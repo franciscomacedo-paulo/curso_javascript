@@ -5,8 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Francisco Macedo">
     <title>Iteracao entre Botoes</title>
+    <style>
+        body{
+            background-color: rgb(16, 15, 15);
+            width: 100%;
+            height: 100vh;
+        }
+        h1{
+            color: #ccc;
+            text-align: center;
+        }
+        .main_conteiner{
+            max-width: 70%;
+            border: 1px solid rgba(82, 82, 83, 0.702);
+            background-color: rgba(47, 47, 48, 0.746);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px; 
+            border-radius: 10px;
+        }
+        .btn_conteiner{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: start;
+            gap: 16px;
+
+            & .btn{
+                flex-basis: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                font-size: 16px ;
+                border: none;
+                background-color: rgba(13, 13, 13, 0.58);
+                outline: 1px solid rgb(93, 92, 92);
+                border-radius: 10px;
+                color: #ccc;
+                cursor: pointer;
+            }
+        }
+        .btn.btn_active{
+            background-color: rgb(48, 115, 249);
+            transition: .2s linear;
+        }
+        .btn.btn_active:hover{
+            background-color: rgb(74, 133, 250);
+        }
+        .content_conteiner{
+            width: 100%;
+            border: 1px solid rgb(45, 44, 44);
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(27, 27, 27, 0.725);
+            min-height: 150px;
+        }
+        .content_conteiner .item_content{
+            display: none;
+            color: #ccc;
+            letter-spacing: 0.5px;
+            font-size: 18px;
+        }
+        .item_content.item_active{
+            display: block;
+        }
+    </style>
 </head>
 <body>
+    <h1>Botoes Dinamicos</h1>
+
+    <div class="main_conteiner">
+        <div class="btn_conteiner">
+            <button type="button" class="btn btn_active" id="bquote">blockquote</button>
+            <button type="button" class="btn " id="baddress">addres</button>
+            <button type="button" class="btn " id="bcity">city</button>
+            <button type="button" class="btn " id="bstrong">strong</button>
+        </div>
+
+        <div class="content_conteiner">
+            <div class="item_content item_active">
+                <p><code>&lt;Blockquote&gt;</code></p>
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore laudantium, dolorem nihil quos id soluta culpa impedit sapiente ipsa alias.
+            </div>
+            <div class="item_content">
+                <p><code>&lt;Address&gt;</code></p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore laudantium, dolorem nihil quos id soluta culpa impedit sapiente ipsa alias.
+            </div>
+            <div class="item_content">
+                <p><code>&lt;City&gt;</code></p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore laudantium, dolorem nihil quos id soluta culpa impedit sapiente ipsa alias.
+            </div>
+            <div class="item_content">
+                <p><code>&lt;Strong&gt;</code></p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore laudantium, dolorem nihil quos id soluta culpa impedit sapiente ipsa alias.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //Pegando todos os botoes
+        const btn_quote = document.getElementById('bquote')
+        const btn_addres = document.getElementById('baddress')
+        const btn_city = document.getElementById('bcity')
+        const btn_strong = document.getElementById('bstrong')
+        const list_item = document.querySelectorAll('.item_content')
+
+
+        
+
+    </script>
     
 </body>
 </html>
