@@ -36,6 +36,8 @@
             width: 100%;
             justify-content: start;
             gap: 16px;
+            flex-wrap: wrap;
+
 
             & .btn{
                 flex-basis: 150px;
@@ -77,6 +79,15 @@
         .item_content.item_active{
             display: block;
         }
+        @media (max-width: 650px){
+            .btn_conteiner {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+           
+
+        }
     </style>
 </head>
 <body>
@@ -117,6 +128,26 @@
         const btn_city = document.getElementById('bcity')
         const btn_strong = document.getElementById('bstrong')
         const list_item = document.querySelectorAll('.item_content')
+
+        // Funcao para remover a class active do elemento actual
+        function removeItemActiveClass(){
+            let itemActalActive = document.querySelector('.item_active')
+            itemActalActive.classList.remove('item_active')
+            console.log("Estilo removido!")
+        }
+
+        // Funcao para adicionar a class active no elemento clicado
+        function addClassActive(){
+            let itemActalActive = document.querySelector('.item_active')
+            itemActalActive.classList.add('item_active')
+
+        }
+
+        btn_addres.addEventListener('click', ()=>{
+            removeItemActiveClass()
+            addClassActive()
+
+        })
 
 
         
