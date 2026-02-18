@@ -104,6 +104,9 @@
             border-radius: 6px;
             background-color: #131316b5;
             min-height: 150px;
+            box-sizing: border-box;
+            padding: 5px;
+            color: #ccc;
             /* margin: 0; */
         }
         span{
@@ -140,7 +143,7 @@
             <div class="cont_item">
                 <label for="prof">Escolha sua profissão</label>
                 <select name="prof" id="prof">
-                    <option value="#">--Seleciona--</option>
+                    <option value="#" selected>--Seleciona--</option>
                     <option value="estudante">Estudante</option>
                     <option value="professor">Professor</option>
                     <option value="motorista">Motorista</option>
@@ -162,7 +165,40 @@
 
     <script>
         const list_profissoes = document.getElementById('prof')
+        const btn_show_data  = document.querySelector('.btn_show_data ')
+        const btn_limpar_data = document.querySelector('.btn_limpar_data')
+
         console.log(list_profissoes)
+
+        // Funcao para pegar o valor, no atributo value
+        const readValue = () =>{
+            let valor = list_profissoes.value
+            let result = document. getElementById('result').innerText = "Valor: " + valor
+            console.log(result)
+        }
+
+
+        // Funcao para pegar o valor visual dos options
+        const show_visual_value = () =>{
+            let valor_visual = list_profissoes.options[list_profissoes.selectedIndex]
+            let result = document. getElementById('result').innerText = "Valor: " + valor_visual.text
+        }
+
+        const clear_datas = () =>{
+            let result = document. getElementById('result').innerHTML = "..."
+        }
+
+        // Configuracao do botao para mostrar os dados
+        btn_show_data.addEventListener('click', show_visual_value)
+
+        // Configuracao do botao para limpar o valor do resultado
+        btn_limpar_data.addEventListener('click', clear_datas)
+
+        // Reagir a qualquer mudança
+        list_profissoes.addEventListener('(change)', ()=>{
+            console.log("The value changed " + this.value)
+        })
+        
     </script>
 
     
