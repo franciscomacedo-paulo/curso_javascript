@@ -4,55 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Francisco Macedo">
+    <link rel="stylesheet" href="./aula03.css">
     <title>Trocando de Abas</title>
     <style>
-        *{
-            color: #ccc;
-        }
-        img{
-            width: 60px;
-            height: 60px;
-            border-radius: 10px;
-        }
-        body{
-            background-color: #121111;
-            width: 100%;
-        }
-        h1{
-            text-align: center;
-            
-        }
-
-        /* CONFIGURACAO DO MAIN_CONTEINER */
-        .main_conteiner{
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-            padding: 16px;
-            border:1px solid #2b2b2b ;
-            background-color: #1d1c1c9d;
-            width: 50%;
-            max-height: 300px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            overflow: auto;
-            border-radius: 10px;
-        }
-        .content_conteiner{
-            width: 100%;
-            border: 1px solid rgb(54, 53, 53);
-            padding: 16px;
-            box-sizing: border-box;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            border-top-right-radius: 10px;
-        }       
-        .logo{
-            display: flex;
-            align-items: center;
-        }
+        
     </style>
 </head>
 <body>
@@ -60,26 +15,26 @@
 
     <div class="main_conteiner">
         <div class="btn_conteiner">
-            <button class="btn btn_ativo">HTML</button>
-            <button class="btn ">CSS</button>
-            <button class="btn ">JavaScript</button>
-            <button class="btn ">Nodejs</button>
-            <button class="btn ">React</button>
+            <button class="btn btn_ativo html">HTML</button>
+            <button class="btn css">CSS</button>
+            <button class="btn js">JavaScript</button>
+            <button class="btn node">Nodejs</button>
+            <button class="btn react">React</button>
         </div>
 
         <div class="content_conteiner">
-            <div class="item_active item list">
+            <div class="item list item_active ">
                 <div class="logo">
                     <img src="../img/html_logo.jpg" alt="Logo do HTML">
                 </div>
                 <dl>
                     <dt>HTML</dt>
                     <dd>
-                        HTML é a linguagem padrão para a construção das páginas web, que significa, (HyperText Marckup Language) ou seja Linguagem de Marcação de Texto, é com o HTMl que se cria a estrutura da texto.
+                        HTML é a linguagem padrão para a construção das páginas web, que significa, (HyperText Marckup Language) ou seja Linguagem de Marcação de Texto, é com o HTMl que se cria a estrutura da página.
                     </dd>
                 </dl>
             </div>
-            <div class="css item list">
+            <div class=" item list ">
                 <div class="logo">
                     <img src="../img/02-css.png" alt="Logo do Css">
                 </div>
@@ -90,31 +45,18 @@
                     </dd>
                 </dl>
             </div>
-            <div class="js item list">
+            <div class=" item list ">
                 <div class="logo">
                     <img src="../img/javascript-logo.png" alt="Logo do JavaScript">
                 </div>
                 <dl>
                     <dt>JavaScript</dt>
                     <dd>
-                       JavaScript é a linguagem pela iteractividade da página, ou seja ele da vida, as páginas webs, tornandos mais dinamicas controlando assim o que acontece, em cada click.
+                       JavaScript é a linguagem que a iteractividade da página, ou seja ele da vida, as páginas webs, tornandos mais dinamicas controlando assim o que acontece, em cada click.
                     </dd>
                 </dl>
             </div>
-            <div class="react item list">
-                <div class="logo">
-                    <img src="../img/reactjs_logo.webp" alt="Logo do Reactjs">
-                </div>
-                <dl>
-                    <dt>React</dt>
-                    <dd>
-                        O React é uma biblioteca JavaScript usada para criar interfaces de usuário (UI) — principalmente para aplicações web modernas e interativas.
-
-                        Ele foi criado pelo Meta (antigo Facebook) e hoje é uma das tecnologias mais usadas no mundo front-end.
-                    </dd>
-                </dl>
-            </div>
-            <div class="node item list">
+            <div class=" item list">
                 <div class="logo">
                     <img src="../img/nodejs_logo.jpg" alt="Logo do Nodejs">
                 </div>
@@ -127,8 +69,44 @@
                     </dd>
                 </dl>
             </div>
+            <div class=" item list">
+                <div class="logo">
+                    <img src="../img/reactjs_logo.webp" alt="Logo do Reactjs">
+                </div>
+                <dl>
+                    <dt>React</dt>
+                    <dd>
+                        O React é uma biblioteca JavaScript usada para criar interfaces de usuário (UI) — principalmente para aplicações web modernas e interativas.
+
+                        Ele foi criado pelo Meta (antigo Facebook) e hoje é uma das tecnologias mais usadas no mundo front-end.
+                    </dd>
+                </dl>
+            </div>
         </div>
     </div>
+
+    <script>
+        const list_btn = document.querySelectorAll('.btn')
+        const list_item = document.querySelectorAll('.item')
+        console.log(list_item)
+
+        list_btn.forEach((btn, index) => {
+            btn.addEventListener('click', () =>{
+                
+               list_btn.forEach((b) =>{
+                b.classList.remove('btn_ativo')
+               })
+
+             list_item.forEach((item) => {
+                item.classList.remove('item_active')
+             })
+
+
+             btn.classList.add('btn_ativo')
+             list_item[index].classList.add('item_active')            
+            })
+        })
+    </script>
     
 </body>
 </html>
