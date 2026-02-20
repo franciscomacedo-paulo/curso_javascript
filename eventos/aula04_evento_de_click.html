@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evento de Click</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <h1>Evento de Click</h1>
+    <div>
+        <button type="button">Change Color</button>
+        <button type="button">Remove Color</button>
+    </div>
+
+    <script>
+        const btn_change_color = document.querySelector('button')
+        const btn_remove_bg_color = document.querySelector('button')
+
+        //** FUNCAO PARA GERAR NUMERO ALETORIOS
+        function valoresGerado(valor){
+            return Math.floor(Math.random() * (valor + 1));
+        }
+
+        //** FUNCAO PARA REMOVER A COR DE FUNDO ADICIONADA
+        function changeBgColor(){
+            const getRandonValues = `rgb(${valoresGerado(255)} ${valoresGerado(255)} ${valoresGerado(255)})`;
+            document.body.style.backgroundColor = getRandonValues;
+            console.log(getRandonValues);
+
+        }
+
+        //** Button usado para adicionar a cor do fundo
+        btn_change_color.addEventListener('click', changeBgColor);
+        btn_change_color.addEventListener('mouseout', changeBgColor);
+
+        //** Button para remover a cor de fundo
+        //btn_remove_bg_color.removeEventListener('click', changeBgColor)
+
+    </script>
     
 </body>
 </html>
