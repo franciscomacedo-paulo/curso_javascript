@@ -4,8 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relacao dos elemento no DOM</title>
+    <style>
+        body{
+            background-color: #121111;
+            color: #ccc;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+            border: 3px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            width: 400px;
+            padding: 16px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            & div.item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: tomato;
+                padding: 10px;
+                min-width: 200px;
+                border-radius: 10px;
+                border-style: solid;
+                border-color: rgb(158, 32, 10);
+                border-width: 3px;
+                border-spacing: 2px;
+                cursor: pointer;
+                transition: all 1s;
+            }
+
+            & div.item:hover{
+                background-color: darkred;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="container">
+        <div class="item">HTML</div>
+        <div class="item">CSS</div>
+        <div class="item">JAVASCRIPT</div>
+        <div class="item">NODEJS</div>
+        <div class="item">REACT</div>
+        <div class="item">MYSQL</div>
+    </div>
+
+
+
+    <script src="./aula01_relacao_dos_elementos.js"></script>
 </body>
 </html>
