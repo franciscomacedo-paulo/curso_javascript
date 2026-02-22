@@ -17,3 +17,6 @@ console.log(verificar)
 //Verificando o pai do elemento em uma posicao especifica
 
 console.log(cursos[0].parentElement.parentElement.parentElement) //aqui estou a pegar ate o bisavo
+
+// Mostrando o irmao anterior de CSS
+console.log(cursos[1].previousElementSibling)
