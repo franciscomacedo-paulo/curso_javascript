@@ -4,19 +4,27 @@ const cursos = ['HTML','CSS','JAVASCRIPT','NODEJS']
 
 cursos.forEach((el,i)=>{
     const newDiv = document.createElement('div')
-    const binIcon = document.createElement('img')
-    binIcon.setAttribute('class', 'icon')
-    binIcon.setAttribute('src', '../img/lixeira.png')
-
     newDiv.setAttribute('class', 'item')
-
     conteiner.appendChild(newDiv)
-    newDiv.appendChild(binIcon)
     newDiv.innerHTML = el
+    
+    const binIcon = document.createElement("img")
+    binIcon.setAttribute('class', 'icon')
+    binIcon.setAttribute("src", "./lixeira.png")
+    newDiv.appendChild(binIcon)
+
+    
+
 
     newDiv.addEventListener('click', (e)=>{
         console.log(e.target)
-        conteiner.removeChild(e.target)
+        // conteiner.removeChild(e.target)
+        e.stopPropagation()
+    })
+
+    binIcon.addEventListener('click', (evet)=>{
+        console.log("fui cliacado")
+        conteiner.removeChild(evet.target.parentNode)
     })
     
 })
