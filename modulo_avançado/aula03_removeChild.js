@@ -18,7 +18,6 @@ cursos.forEach((el,i)=>{
 
     newDiv.addEventListener('click', (e)=>{
         console.log(e.target)
-        // conteiner.removeChild(e.target)
         e.stopPropagation()
     })
 
