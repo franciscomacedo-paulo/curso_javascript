@@ -74,6 +74,7 @@ console.log(novoProdutosComDesconto)
 
 console.log("\n******************************************\n")
 const precoEstimado = 3000.00;
+
 //* PEGAR SOMENTE OS PRODUTOS COM PREÇOS SUPERIOR A 3000
 for(produt of produtos){
     if(produt.preco > precoEstimado){
