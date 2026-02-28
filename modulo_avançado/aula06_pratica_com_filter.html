@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Francisco Macedo">
+    <link rel="stylesheet" href="./aula06_style.css">
     <title>Praticando com metodo Filter</title>
+    
 </head>
 <body>
+    <section>
+        <div class="caixa" id="caixa_nova_funcionalidade">
+
+            <div id="caixa_novo_curso" class="caixa_funcionalidade">
+                <label for="curso_name">Nome do curso</label>
+                <input type="text" name="curso_name" id="curso_name" required placeholder="digite o nome de um curso">
+                <button type="button" class="btn_adicionar_curso">Adicionar</button>
+            </div>
+
+            <div id="caixaRemoverCurso" class="caixa_funcionalidade">
+                <button type="button" id="btn_remover_curso_selecionado">Remover Selecionado</button>
+            </div>
+
+            <div id="caixaCursoSelecionado" class="caixa_funcionalidade">
+                <button type="button" class="btn_curso_sel">Curso Selecionado</button>
+            </div>
+        </div>
 
 
+        <div class="caixa" id="caixaCuros">
 
+        </div>
+
+    </section>
     <script src="./aula06_pratica_com_filter.js"></script>
 </body>
 </html>
