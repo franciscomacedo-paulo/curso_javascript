@@ -8,11 +8,13 @@ const btn_curso_sel = document.querySelector('.btn_curso_sel')
 
 
 cursos.forEach((el)=>{
+    //* CRIAÇÃO DA DIV
     const novaDiv = document.createElement('div')
     novaDiv.setAttribute('class', 'curso')
     caixaCuros.appendChild(novaDiv)
     novaDiv.innerHTML = el
     
+    //* CRIAÇÃO DO INPU TO TTIPO RADIO
     const btnRadios = document.createElement('input')
     btnRadios.setAttribute('type', 'radio')
     btnRadios.setAttribute('name', 'rb_cursos')
