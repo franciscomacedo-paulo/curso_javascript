@@ -11,9 +11,7 @@ const cursos = [
 const caixaCuros = document.getElementById("caixaCuros");
 const curso_name = document.querySelector("#curso_name");
 const btn_adicionar_curso = document.querySelector(".btn_adicionar_curso");
-const btn_remover_curso_selecionado = document.querySelector(
-  "#btn_remover_curso_selecionado"
-);
+const btn_remover_curso_selecionado = document.querySelector("#btn_remover_curso_selecionado");
 const btn_curso_sel = document.querySelector(".btn_curso_sel");
 
 cursos.forEach((el) => {
@@ -28,7 +26,7 @@ cursos.forEach((el) => {
   divRadio.setAttribute("id", "dr");
   novaDiv.appendChild(divRadio);
 
-  //* CRIAÇÃO DO INPUt TO TTIPO RADIO
+  //* CRIAÇÃO DO INPUT TO TTIPO RADIO
   const btnRadios = document.createElement("input");
   btnRadios.setAttribute("type", "radio");
   btnRadios.setAttribute("name", "rb_cursos");
