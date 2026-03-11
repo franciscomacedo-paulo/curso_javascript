@@ -3,5 +3,5 @@
 */
 
 const frase = "Alexa Bodi"
-const codeLetter = frase.charCodeAt(0 )
+const codeLetter = frase.charCodeAt(0)
 console.log(codeLetter)
