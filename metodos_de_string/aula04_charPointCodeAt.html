@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Método CharPointAt()</title>
+  </head>
+  <body>
+    <div>
+      <label for="letter">Digite uma letra:</label>
+      <input type="text" name="letter" id="letter" required />
+    </div>
+    <div>
+      <p i>A letra digitada: <span id="letra"> </span></p>
+      <p>Código da letra: <span id="letra_code"> </span></p>
+    </div>
+
+    <script>
+      const letra_input = document.getElementById("letter");
+      const letra = document.querySelector("#letra");
+      const letra_code = document.querySelector("#letra_code");
+
+      letra_input.addEventListener("keypress", (evt) => {
+        letra.innerHTML = evt.key;
+        letra_code.innerHTML = evt.code;
+      });
+
+      const frase = "Szia"
+      const codeLetter = frase.codePointAt(2)
+      console.log(codeLetter)
+    </script>
+  </body>
 </html>
