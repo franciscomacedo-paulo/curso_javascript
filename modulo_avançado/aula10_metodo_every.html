@@ -4,8 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Método Every()</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: #121111;
+        }
+        header{
+            width: 100%;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            & h1{
+                background-image: linear-gradient(45deg, red, blue);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 50px;
+            }
+        }
+        main{
+            width: 100%;
+            padding: 16px;
+        }
+        .mostrar_arry{
+            border-left: 4px solid green;
+            padding-inline: 16px;
+            padding-block: 20px;
+            background-color: rgba(172, 255, 47, 0.542);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            margin-bottom: 20px;
+
+            & p, span{
+                font-size: 20px;
+                color: #fff;
+                letter-spacing: 0.5px;
+                font-weight: 700;
+            }
+        }
+        .conteiner_btn{
+            border-left: 4px solid rgb(224, 135, 57);
+            padding-inline: 16px;
+            padding-block: 20px;
+            background-color: rgba(255, 175, 47, 0.436);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            margin-bottom: 20px;
+
+            & button{
+                padding-inline-start: 16px;
+                padding-inline-end: 16px;
+                border: none;
+                outline: none;
+                height: 46px;
+                width: 200px;
+                font-size: 20px;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                border-radius: inherit;
+                cursor: pointer;
+            }
+
+        }
+        .mostrar_resultado{
+            border-left: 4px solid rgb(224, 57, 165);
+            padding-inline: 16px;
+            padding-block: 20px;
+            background-color: rgba(196, 47, 255, 0.436);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            margin-bottom: 20px;
+
+            & p, span{
+                font-size: 20px;
+                color: #fff;
+                letter-spacing: 0.5px;
+                font-weight: 700;
+            }
+        }
+
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Método Every()</h1>
+    </header>
+    <main>
+        <div class="mostrar_arry">
+            <p>Array:</p>
+            <span id="array_valores"></span>
+        </div>
+
+        <div class="conteiner_btn">
+            <button type="button">Verificar</button>
+        </div>
+        <div class="mostrar_resultado">
+            <p>Resultado:</p>
+            <span id="result"></span>
+        </div>
+    </main>
     
+
+    <script src="./aula10_metodo_every.js"></script>
 </body>
 </html>
