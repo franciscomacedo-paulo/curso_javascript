@@ -1,18 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metodo conc</title>
     <style type="text/css">
-        body{
-            background-color: #121111;
-            color: #ccc;
+      body {
+        background-color: #121111;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Método <code>concat()</code></h1>
+    </header>
+    <main>
+      <div>
+        <label for="fname">Primeiro nome:</label>
+        <input
+          type="text"
+          name="fname"
+          id="fname"
+          placeholder="digite seu primeiro nome..."
+        />
+      </div>
+      <div>
+        <label for="lname">Ultimo nome:</label>
+        <input
+          type="text"
+          name="lname"
+          id="lname"
+          placeholder="digite seu ultimo nome..."
+        />
+      </div>
+      <div>
+        <button type="button" value="Enviar">Enviar</button>
+      </div>
+    </main>
+
+    <script>
+      const fname = document.getElementById("fname");
+      const lname = document.getElementById("lname");
+      const btn_enviar = document.querySelector("button");
+
+      const impediEnvioPadrao = (evt) => {
+        const verificarInputVazio = document.querySelectorAll('input[type="text"]');
+
+        // Exibe a primeira mensagem apenas se os DOIS campos estiverem vazios
+        if (fname.value.trim() == "" && lname.value.trim() == "") {
+          evt.preventDefault();
+          return alert("Preencha os campos primeiro");
         }
 
-    </style>
-</head>
-<body>
-    
-</body>
+        // Converte NodeList para Array e verifica campos individuais
+        const campoVazio = Array.from(verificarInputVazio).find(
+          (el) => el.value.trim() === ""
+        );
+
+        if (campoVazio) {
+          evt.preventDefault();
+          return alert(`Por favor ${campoVazio.placeholder}`);
+        }
+
+        alert("Dados enviados com sucesso");
+      };
+
+      function pegandoOsValores(e) {
+        impediEnvioPadrao(e);
+        let pname = fname.value;
+        let uname = lname.value;
+        
+        //* Usando o operador de concatencao (+)
+        //let fullName = pname + " " + uname;
+
+        let nomeCompleto = pname.concat(" ", uname);
+
+        console.log(`O seu nome completo é ${nomeCompleto}`);
+      }
+
+      btn_enviar.addEventListener("click", pegandoOsValores);
+    </script>
+  </body>
 </html>
