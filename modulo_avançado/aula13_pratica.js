@@ -18,4 +18,9 @@ const produtos = [
     { nome: "Luminária de Mesa", preco: 90, desconto: 5, categoria: "casa" }
   ];
 
+  const user_data = document.getElementById('produto')
+  const btn_pesquisar = document.querySelector('button')
+  const mostrar_resultado = document.getElementsByClassName('result_display')
+
+
   

@@ -18,6 +18,74 @@
         background-color: #121111;
         width: 100%;
         height: 100vh;
+        padding: 16px;
+      }
+      header{
+        width: 100%;
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & h1{
+          background-image: linear-gradient(45deg, red , blue);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 40px;
+
+        }
+      }
+      main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        & div.inputs_entrada{
+          width: 100%;
+          padding: 16px;
+          /* border: 1px solid #504f4f; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 16px;
+          margin-bottom: 30px;
+
+          & input[type="text"]{
+            width: 300px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            background-color: #222222;
+            color: #fff;
+            font-size: 16px;
+          }
+
+          & button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            background-color: rgb(10, 158, 199);
+            color: #cac6c6;
+          }
+        }
+
+        & div.result_display{
+          width: 100%;
+          min-height: 500px;
+          border-radius: 6px;
+          padding: 16px;
+          border: 1px solid #787777;
+
+
+        }
       }
     </style>
   </head>
