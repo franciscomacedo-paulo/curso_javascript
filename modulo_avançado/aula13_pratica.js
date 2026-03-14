@@ -19,8 +19,27 @@ const produtos = [
   ];
 
   const user_data = document.getElementById('produto')
-  const btn_pesquisar = document.querySelector('button')
+  const btn_pesquisar = document.querySelector('#btn_pesquisar')
   const mostrar_resultado = document.getElementsByClassName('result_display')
 
 
+  function filtrarPorCategoria(){
+    let user_value = user_data.value
+    const produtoFiltrado = produtos
+    .filter((produto) => produto.categoria === user_value)
+    .some((p) => p.nome === user_value) 
+    return produtoFiltrado
+  }
+  function algumItem(){
+    const alugmProduto = produtos.some((produto) =>{
+      return produto.nome === user_data.value
+    })
+    return alugmProduto
+  }
   
+
+  btn_pesquisar.addEventListener('click',()=>{
+       console.log(filtrarPorCategoria())
+       //console.log(algumItem())
+  })
+ 
