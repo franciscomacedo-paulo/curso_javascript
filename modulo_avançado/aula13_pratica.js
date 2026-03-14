@@ -20,7 +20,7 @@ const produtos = [
 
   const user_data = document.getElementById('produto')
   const btn_pesquisar = document.querySelector('#btn_pesquisar')
-  const mostrar_resultado = document.getElementsByClassName('result_display')
+  const mostrar_resultado = document.querySelector('.result_display')
 
 
   function filtrarPorCategoria() {
@@ -29,6 +29,14 @@ const produtos = [
         return produto.categoria.toLowerCase() === user_value || 
                produto.nome.toLowerCase().includes(user_value)
     })
+
+    const listarProdutos = produtoFiltrado.map((el)=>{
+      return `<li>
+                <strong>${el.nome} ${el.preco} ${el.desconto} ${el.categoria}</strong>
+              </li>`
+    }).join("")
+    
+    mostrar_resultado.innerHTML = `<ul>${listarProdutos}</ul>`
     return produtoFiltrado
 }
   // function filtrarPorCategoria(){
