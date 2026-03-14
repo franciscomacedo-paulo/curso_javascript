@@ -23,21 +23,22 @@ const produtos = [
   const mostrar_resultado = document.getElementsByClassName('result_display')
 
 
-  function filtrarPorCategoria(){
-    let user_value = user_data.value
-    const produtoFiltrado = produtos
-    .filter((produto) => produto.categoria === user_value)
-    .some((p) => p.nome === user_value) 
-    return produtoFiltrado
-  }
-  function algumItem(){
-    const alugmProduto = produtos.some((produto) =>{
-      return produto.nome === user_data.value
+  function filtrarPorCategoria() {
+    let user_value = user_data.value.toLowerCase()
+    const produtoFiltrado = produtos.filter((produto) => {
+        return produto.categoria.toLowerCase() === user_value || 
+               produto.nome.toLowerCase().includes(user_value)
     })
-    return alugmProduto
-  }
-  
-
+    return produtoFiltrado
+}
+  // function filtrarPorCategoria(){
+  //   let user_value = user_data.value
+  //   const produtoFiltrado = produtos
+  //   .filter((produto) =>{return produto.categoria === user_value})
+  //   .filter((p) => {return p.nome === user_value}) 
+  //   return produtoFiltrado
+  // }
+ 
   btn_pesquisar.addEventListener('click',()=>{
        console.log(filtrarPorCategoria())
        //console.log(algumItem())
