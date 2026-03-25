@@ -1,0 +1,1 @@
+const cores = ['vermelho','azul','verde']
