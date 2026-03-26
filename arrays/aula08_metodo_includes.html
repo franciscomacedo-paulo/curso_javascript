@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo includes()</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            background: linear-gradient(30deg, red, blue);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-origin: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+        header{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            
+            & h1{
+                color: #fff;
+            }
+        }
+        main{
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            background-color: #12111193;
+            border-radius: 10px;
+            margin-top: 20px;
+            padding: 6px;
+
+            & div{
+                padding: 16px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        input{
+            padding: 12px;
+            width: 100%;
+            border: none;
+            outline: none;
+            max-width: 200px;
+            border-radius: 6px;
+            font-size: 16px;
+
+        }
+        button{
+            padding: 12px;
+            width: 100%;
+            border: none;
+            outline: none;
+            max-width: 200px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            background-color: rgb(10, 80, 242);
+            color: #fff;
+            cursor: pointer;
+        }
+        div.lista_produto{
+            min-height: 200px;
+            background-color: #121111cb;
+            border-radius: 10px;
+            border: 1px solid #616161;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Método includes() do JavaScript</h1>
+    </header>
+    <main>
+        <div>
+            <input type="text" name="produto" id="produto" placeholder="pesquisar um produto" required>
+        </div>
+        <div>
+            <button type="button">pesquisar</button>
+        </div>
+
+        <div class="lista_produto">
+
+        </div>
+    </main>
+
+
+    <script src="./aula08_metodo_includes.js"></script>
+    
+</body>
+</html>
