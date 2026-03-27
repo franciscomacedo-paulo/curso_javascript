@@ -42,6 +42,8 @@
             border-radius: 10px;
             margin-top: 20px;
             padding: 6px;
+            backdrop-filter: blur(8px);
+            
 
             & div{
                 padding: 16px;
@@ -80,6 +82,15 @@
             background-color: #121111cb;
             border-radius: 10px;
             border: 1px solid #616161;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            & #list{
+                color: #fff;
+                font-size: 18px;
+                
+            }
         }
     </style>
 </head>
@@ -89,7 +100,7 @@
     </header>
     <main>
         <div>
-            <input type="text" name="produto" id="produto" placeholder="pesquisar um produto" required>
+            <input type="text" name="produto" id="produto" placeholder="pesquisar um produto" required autocomplete="off">
         </div>
         <div>
             <button type="button">pesquisar</button>
