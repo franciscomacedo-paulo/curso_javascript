@@ -18,3 +18,10 @@ console.log("----------------------------------------");
 console.log("ORGANIZANDO O ARRAY COM O METODO SORT()");
 numero.sort();
 console.log(numero)
+console.log("----------------------------------------");
+console.log('METODO SORT() COM PARAMENTRO')
+
+const meses = ['Fev','Jan','Mar','Abri','Dec','Nov','Out']
+console.log(meses)
+meses.sort((a,b) => a - b)
+console.table({meses})
