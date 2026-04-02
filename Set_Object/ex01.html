@@ -1,11 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Object Set</title>
-</head>
-<body>
-    
-</body>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to left top, #f67608, #053a41, #020c0f);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      header h1 {
+        color: #f67608;
+        font-size: 60px;
+        letter-spacing: 0.6px;
+      }
+      main {
+        width: 100%;
+        min-height: 400px;
+        background-color: #121111a2;
+        border: 1px solid #3f3e3e;
+        border-radius: 20px;
+        backdrop-filter: blur(8px);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+      }
+      main section {
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+        background-color: #12111177;
+        border: 1px solid #222222;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+      }
+      main section label {
+        color: #ccc;
+        font-size: 20px;
+      }
+      main section select {
+        padding-inline: 10px;
+        text-indent: 20px;
+        width: 100%;
+        max-width: 200px;
+        padding: 8px;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+      }
+      div.entrada {
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+        background-color: #12111177;
+        border: 1px solid #222222;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+
+        & input {
+          padding-inline: 10px;
+          text-indent: 20px;
+          width: 100%;
+          max-width: 200px;
+          padding: 8px;
+          border: none;
+          border-radius: 10px;
+          outline: none;
+        }
+      }
+      div.btn {
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+        background-color: #12111177;
+        border: 1px solid #222222;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+
+        & button{
+            padding: 16px;
+            width: 100%;
+            max-width: 200px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            background-color: #f67608;
+            color: #fcf8f8;
+            cursor: pointer;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Coleção Set()</h1>
+    </header>
+    <main>
+      <section>
+        <label for="cursos">Seleciona o curso:</label>
+        <select name="cursos" id="cursos" multiple size="1">
+          <option value="default" selected>-- selecionar --</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">Javascript</option>
+          <option value="react">React</option>
+          <option value="nodejs">Nodejs</option>
+          <option value="threejs">Threejs</option>
+        </select>
+      </section>
+      <div class="entrada">
+        <input
+          type="text"
+          name="linguagem"
+          id="linguagem"
+          required
+          placeholder="digite uma linguagem..."
+        />
+      </div>
+      <div class="btn">
+        <button type="button">Mostrar dados</button>
+      </div>
+    </main>
+
+    <script>
+        const seletLista = document.querySelector('select')
+        const btn = document.querySelector('button')
+        const setList = new Set()
+        const inputValue = document.querySelector('#linguagem')
+        
+        
+
+
+        btn.addEventListener('click', (evt)=>{
+            evt.preventDefault()
+            let valor = inputValue.value
+            setList.add(valor)
+            console.log(seletLista.options[seletLista.selectedIndex].text)
+            console.log(setList)
+            inputValue.value = ""
+
+            if(setList.has(inputValue)){
+                alert('Já existe esse valor na tua lista')
+                return
+            }
+
+        })
+    </script>
+  </body>
 </html>
