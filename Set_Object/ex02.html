@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Francisco Macedo">
     <title>Objeto Set do JavaScript</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to left bottom, rgb(1, 1, 86), rgb(0, 96, 96));
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        header{
+            width: 100%;
+            padding: 20px;
+
+            & h1{
+                text-align: center;
+                color: #fff;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>Set()</h1>
+    </header>
+    <script>
+        let musicas = new Set()
+        console.log(musicas instanceof Set)
+    </script>
 </body>
 </html>
